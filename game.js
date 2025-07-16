@@ -1,8 +1,10 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
-canvas.width = 400;
-canvas.height = 600;
+// Adjust canvas for high-DPI screens
+const dpr = window.devicePixelRatio || 1;
+canvas.width = 400 * dpr;
+canvas.height = 600 * dpr;
 
 // Game constants
 const gravity = 0.5;
